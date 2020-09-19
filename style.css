@@ -12,15 +12,15 @@
   --color-community-bg: #f5f6f7;
   --basic-font-size: 14px;
   --side-margin: 269px;
-  --main-menu-margin: 42px;
+  --main-menu-margin: 45px;
   --logo-size: 44px;
   --social-size: 20px;
   --page-width: 1600px;
   --slide-width: 407px;
   --slide-height: 244px;
   --text-block-size: 407px;
-  --section-top-padding: 120px;
-  --section-bottom-padding: 140px;
+  --section-top-padding: 119px;
+  --section-bottom-padding: 134px;
 }
 
 /* common styles */
@@ -46,7 +46,8 @@ footer,
 main,
 nav,
 section,
-figure {
+figure,
+form {
   margin: 0;
   display: block;
 }
@@ -85,10 +86,10 @@ h4 {
 h5 {
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 11px;
   letter-spacing: 2.4px;
   text-transform: uppercase;
-  margin: 25px 0 15px 0;
+  margin: 19px 0 0px 0;
 }
 
 /* main blocks */
@@ -102,7 +103,7 @@ section {
 
 .global-wrapper {
   width: var(--page-width);
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 
 header,
@@ -113,53 +114,48 @@ footer,
 }
 
 header {
-  height: 95px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-footer {
-}
-
-main {
-}
-
 .your-life {
   background-image: url("assets/hero.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center center;
-  height: 100vh;
+  background-position: bottom center;
+  /* height: 100vh; */
+  height: 645px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
-.rappresent,
-.implement,
-.our-community {
+.rappresent {
   padding-bottom: var(--section-bottom-padding);
+}
+
+.implement {
+  padding-bottom: 135px;
 }
 .rappresent,
 .implement {
-  padding-top: var(--section-top-padding);
+  padding-top: 120px;
 }
 
-.rappresent {
-}
 .our-community {
   flex-direction: row;
   justify-content: flex-end;
   align-items: baseline;
   padding-top: 80px;
   background-color: var(--color-community-bg);
+  padding-bottom: 140px;
 }
-.implement {
-}
+
 .subscribe {
-  height: 568px;
+  height: 598px;
   color: var(--color-white);
   background-image: url("assets/form-bg.jpg");
   background-size: cover;
@@ -194,7 +190,12 @@ main {
   width: 298px;
   height: fit-content;
   text-align: center;
-  margin: auto 139px 34px auto;
+  margin: auto 139px 20px auto;
+}
+
+.narrow-block p {
+  line-height: 20px;
+  margin-bottom: 13px;
 }
 
 /* details */
@@ -204,13 +205,16 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+.rappresent .content-wrapper {
+  margin: 0 130px 0 128px;
+}
 
 .implement .text-block {
-  margin: 0 0 0 139px;
+  margin: 0 110px 3px 140px;
 }
 
 .rappresent .text-block {
-  margin: 0 248px 0 0;
+  margin: 0 247px 5px 0;
 }
 
 .text-block h3 {
@@ -219,19 +223,21 @@ nav {
 }
 
 .text-block p {
-  margin: 0 0 30px 0;
+  margin: 0 0 27px 0;
+  line-height: 20px;
 }
 
 .subscribe h3 {
   color: var(--color-white);
+  margin-bottom: 30px;
 }
 
 .btn {
   display: block;
-  padding: 15px 47px;
+  padding: 15px 0;
   background-color: var(--color-button);
   position: relative;
-  width: 184px;
+  width: 182px;
   height: 46px;
   color: var(--color-white);
   font-weight: 700;
@@ -253,8 +259,8 @@ nav {
   background: var(--color-button);
   background: linear-gradient(
     90deg,
-    var(--color-button) 69%,
-    var(--color-button-hover) 69%,
+    var(--color-button) 68%,
+    var(--color-button-hover) 68%,
     var(--color-button-hover) 0%
   );
   padding: 18px;
@@ -284,12 +290,12 @@ nav {
 
 .appstore:after {
   background-image: url("assets/icon-apple.svg");
-  margin: -6px 1px 0 0;
+  margin: -5px 2px 0 0;
 }
 
 .playmarket:after {
   background-image: url("assets/icon-android.svg");
-  margin: -4px 0 0 0;
+  margin: -6px 2px 0 0;
 }
 
 .btn-submit {
@@ -323,13 +329,13 @@ nav {
   font-size: 18px;
   max-width: 508px;
   color: var(--color-white);
-  margin: 30px auto;
-
+  margin: 35px auto 0 auto;
   line-height: 25px;
 }
 
 .hero-content .btn {
-  margin: 30px auto;
+  margin: 28px auto;
+  width: 184px;
 }
 
 .motto,
@@ -361,6 +367,10 @@ nav {
   background-image: url("assets/socials.svg");
 }
 
+.socials a:hover {
+  opacity: 0.5;
+}
+
 .download p {
   max-width: 483px;
   text-align: center;
@@ -369,6 +379,7 @@ nav {
 
 .download-buttons {
   display: flex;
+  margin-bottom: 60px;
 }
 
 .mail {
@@ -397,10 +408,12 @@ nav a {
 }
 
 .main-menu {
+  margin-right: 12px;
 }
+
 .main-menu a {
   margin: 0 var(--main-menu-margin);
-  line-height: 22px;
+  line-height: 16px;
 }
 
 .main-menu a.active {
@@ -408,14 +421,13 @@ nav a {
   border-bottom: 1px solid #ffffff;
 }
 .main-menu a:hover {
+  opacity: 0.5;
 }
 
 .main-menu .logo {
   display: inline-block;
-  margin: 0 calc(100px - var(--main-menu-margin));
-}
-
-.ftr-menu {
+  /* margin: 0 calc(100px - var(--main-menu-margin));*/
+  margin: -4px calc(90px - 34px) 0 calc(90px - 36px);
 }
 
 .ftr-menu a {
@@ -423,19 +435,28 @@ nav a {
   border-right: 1px solid #4e4e4e;
   line-height: 8px;
 }
+
+.ftr-menu a:first-of-type {
+}
+
 .ftr-menu a:last-of-type {
   border-right: none;
 }
 
 .ftr-menu a:hover {
+  opacity: 0.5;
 }
 
 footer .logo {
   display: block;
-  margin: 60px auto;
+  margin: 61px 90px 60px 0;
 }
 
 /* form */
+
+form {
+  margin-bottom: 60px;
+}
 
 .form-wrapper {
   display: flex;
@@ -456,7 +477,6 @@ input {
 
 .slider {
   width: 894px;
-  height: 244px;
 }
 
 .viewport {
@@ -501,7 +521,7 @@ input {
   flex-wrap: nowrap;
   align-items: center;
   float: right;
-  margin: 0 269px 22px 0;
+  margin: 0 269px 20px 0;
 }
 
 .pagination a {
@@ -510,6 +530,10 @@ input {
   background-image: url("assets/arrows.svg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.pagination a:hover {
+  opacity: 0.5;
 }
 
 .prev {
@@ -524,9 +548,4 @@ input {
 .pagination span {
   font-size: 18px;
   color: var(--color-heading);
-}
-
-.current {
-}
-.all {
 }
